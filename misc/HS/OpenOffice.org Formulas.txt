@@ -1,0 +1,31 @@
+OpenOffice.org Formulas
+
+Some notes on dealing with the OpenOffice.org formula editor.
+
+To get a formula into your document:
+
+  Insert | Object | Formula
+
+This will give the formula editor at the bottom where they use a bastardized version of MathML.  Also make sure the selection dialog appears (View | Selection if it doesn't).  You can right-click in the formula editor to see what all is available.
+
+One problem I've had is with variables coming out as italics.  For example:
+
+4a div 3b
+
+This doesn't give italics, but this does:
+
+4*a div 3*b
+
+What's wrong?  Well, you need *spaces* like this:
+
+4 a div 3 b
+
+This way it treats the a and b as separate entities rather than part of a "4a" thing.
+
+If you want non-italics, use quotes:
+
+"det" left [ matrix{2 # -3 ## 4 # 1} right ] ~ = phantom{}
+
+Note also the "phantom" to keep oo.o from bitching that you have nothing on the right side of the equals.
+
+For lots more tricks, see my algebra worksheets.  I really should put them on my website for all to learn from.

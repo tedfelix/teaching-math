@@ -1,0 +1,20 @@
+Teaching Math
+
+This repo is a collection of math teaching resources that I've used over the years to teach my kids and grandkid.
+
+FlashCards Addition 2.odt
+  - Reduced set of flashcards with larger numbers on the right to maximize
+    confusion.
+
+MATHTEST.BAS
+  - qbasic positive subtraction timed test program.  100 problems, gives time
+    and score.  Logs progress to mathlog.txt.
+
+mathtest.py
+  - Port of MATHTEST.BAS to python.
+
+misc
+  - Directory dump of all the stuff I found related to math teaching from the
+    2000's.  I plan on moving it to the root directory as I use it, then
+    possibly re-arranging it all in a more organized way over time.
+
