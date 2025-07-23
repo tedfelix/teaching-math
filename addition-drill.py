@@ -12,12 +12,21 @@ import random
 # Seed the RNG.
 random.seed()
 
+# Use a list to reduce the probability of picking 0 and 1.
+numbers = [ 0, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 ]
+
 # Works for Linux.  "cls" for Windoze.
 os.system("clear")
 
 print("Addition Facts")
 print()
-a = input("Press enter to begin...")
+
+total_string = ""
+# How do we check for int?
+while not total_string.isdigit():
+    total_string = input("How many questions? ")
+
+total = int(total_string)
 
 os.system("clear")
 
@@ -26,13 +35,12 @@ print(file = file)
 print("****************************************", file = file)
 print(datetime.datetime.now(), file = file)
 
-total = 25
 correct = 0
 start_time = int(time.time())
 
 for i in range(1, total + 1):
-    x = random.randrange(10)
-    y = random.randrange(10)
+    x = numbers[random.randrange(len(numbers))]
+    y = numbers[random.randrange(len(numbers))]
     sum2 = x + y
     print("<", i, ">  ", x, "+", y, "= ", end="")
     answer = int(input())
