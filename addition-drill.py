@@ -9,6 +9,18 @@ import time
 import datetime
 import random
 
+# Handle input of integers without crashing.
+def input_number2(prompt = ""):
+    done = False
+    while not done:
+        try:
+            result = int(input(prompt))
+            done = True
+        except ValueError:
+            # Try again.
+            pass
+    return result
+
 # Seed the RNG.
 random.seed()
 
@@ -21,15 +33,11 @@ os.system("clear")
 print("Addition Facts")
 print()
 
-total_string = ""
-# How do we check for int?
-while not total_string.isdigit():
-    total_string = input("How many questions? ")
-
-total = int(total_string)
+total = input_number2("How many questions? ")
 
 os.system("clear")
 
+# Write to a log file.
 file = open("mathlog.txt", "a")
 print(file = file)
 print("****************************************", file = file)
@@ -42,13 +50,17 @@ for i in range(1, total + 1):
     x = numbers[random.randrange(len(numbers))]
     y = numbers[random.randrange(len(numbers))]
     sum2 = x + y
-    print("<", i, ">  ", x, "+", y, "= ", end="")
-    answer = int(input())
+    question = "<{}>  {} + {} = ".format(i, x, y)
+
+    answer = input_number2(question)
+
     if answer == sum2:
         print("Correct!")
         correct = correct + 1
     else:
-        print("No, it's", sum2)
+        print()
+        print("**************")
+        print("*** No, it's", sum2)
         print(x, "+" , y, "?= ", answer, file = file)
     print()
 
@@ -59,8 +71,6 @@ result = "You got {} correct out of {}.\n".format(correct, total)
 result += "It took you {}.\n".format(str(datetime.timedelta(seconds = seconds2)))
 
 print(result)
-
-# Write to a log file as well.
 
 print(result, file = file)
 file.close()
