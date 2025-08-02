@@ -30,7 +30,7 @@ numbers = [ 0, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 ]
 # Works for Linux.  "cls" for Windoze.
 os.system("clear")
 
-print("Addition Facts")
+print("Multiplication Facts")
 print()
 
 total = input_number2("How many questions? ")
