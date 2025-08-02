@@ -41,6 +41,7 @@ os.system("clear")
 file = open("mathlog.txt", "a")
 print(file = file)
 print("****************************************", file = file)
+print("addition-drill.py", file = file)
 print(datetime.datetime.now(), file = file)
 
 correct = 0
