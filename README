@@ -6,9 +6,15 @@ addition-drill.py
   - Addition drill.  Select a number of problems and it will time you.  Avoids
     0's and 1's to a certain extent.  Logs results to mathlog.txt.
 
-FlashCards Addition 2.odt
+"FlashCards Addition 2.odt"
   - Reduced set of flashcards with larger numbers on the right to maximize
     confusion.
+
+"FlashCards Multiplication.odt"
+  - Reduced with the commutative property.
+
+"FlashCards Subtraction.odt"
+  - Reduced to only contain those related to the 0-9 fact families.
 
 MATHTEST.BAS
   - qbasic positive subtraction timed test program.  100 problems, gives time
