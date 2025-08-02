@@ -62,7 +62,7 @@ for i in range(1, total + 1):
         print()
         print("**************")
         print("*** No, it's", product)
-        print(x, "×" , y, "?= ", answer, file = file)
+        print(x, "×" , y, "≠", answer, file = file)
     print()
 
 stop_time = int(time.time())
