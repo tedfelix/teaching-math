@@ -30,7 +30,7 @@ Minutes = INT(Seconds / 60)
 Seconds2 = Seconds - Minutes * 60
 PRINT "It took you ";
 
-' Make the minutes a seconds look nice
+' Make the minutes and seconds look nice
 IF Minutes < 10 THEN
   PRINT USING "0#"; Minutes;
 ELSE
